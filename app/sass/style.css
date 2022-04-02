@@ -123,11 +123,14 @@ input, textarea, select, button {
 }
 
 .header {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr -webkit-min-content;
-  grid-template-columns: 1fr min-content;
-  grid-template-rows: -webkit-min-content -webkit-min-content;
-  grid-template-rows: min-content min-content;
+  -ms-grid-columns: 1fr min-content;
+      grid-template-columns: 1fr -webkit-min-content;
+      grid-template-columns: 1fr min-content;
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
 }
 
 .header__line {
@@ -170,10 +173,13 @@ input, textarea, select, button {
     display: none;
   }
   .header {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
-    grid-template-rows: min-content min-content min-content;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: min-content min-content min-content;
+        grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+        grid-template-rows: min-content min-content min-content;
   }
   .header__logo {
     width: 130px;
@@ -247,28 +253,37 @@ input, textarea, select, button {
 
 @media screen and (min-width: 992px) {
   .header {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: -webkit-min-content 1fr;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: -webkit-min-content -webkit-min-content;
-    grid-template-rows: min-content min-content;
+    -ms-grid-columns: min-content 1fr;
+        grid-template-columns: -webkit-min-content 1fr;
+        grid-template-columns: min-content 1fr;
+    -ms-grid-rows: min-content min-content;
+        grid-template-rows: -webkit-min-content -webkit-min-content;
+        grid-template-rows: min-content min-content;
   }
   .header__logo-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
   }
   .header__line {
     grid-column: 2 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   .header__main-menu {
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   .header__logo-box {
     -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
   }
 }
@@ -429,5 +444,4 @@ input, textarea, select, button {
   display: inline-block;
   padding: 3px;
 }
-
 /*# sourceMappingURL=style.css.map */
