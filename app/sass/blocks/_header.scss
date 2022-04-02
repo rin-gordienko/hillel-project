@@ -3,6 +3,8 @@
     border-radius: 0px 0px 12px 12px;
 }
 
+
+
 .header__address,
 .header__facebook,
 .header__menu-list {
@@ -151,6 +153,20 @@
         width: 6px;
         vertical-align: middle;
         margin: 0 6px 0;
+    }
+
+    .header__menu-name {
+        margin-right: 15px;
+        &:hover {
+            border-bottom: 2px solid #FFFFFF;;
+            padding-bottom: 3px;
+        }
+        &:active {
+            color: #F0145A;
+            border-bottom: 2px solid #F0145A;
+            padding-bottom: 3px;
+        }
+        
     }
 
 }

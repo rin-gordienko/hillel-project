@@ -1,0 +1,24 @@
+.headline {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 129px;
+    padding-bottom: 159px;
+}
+
+@media screen and (min-width: 768px) {
+    .headline {
+        margin-top: 269px;
+        padding-bottom: 417px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+.headline {
+    margin-top: 261px;
+    padding-bottom: 305px;
+}
+}

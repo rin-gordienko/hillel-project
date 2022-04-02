@@ -12,10 +12,11 @@
 }
 
 .container {
-    max-width: 1320px;
+    max-width: 1335px;
     min-width: 375px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;
+
 }
 
 .visually-hidden {
@@ -29,17 +30,27 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-  }
+}
 
-  .img-responsive {
+.img-responsive {
       max-width: 100%;
       height: auto;
   }
 
-  a {
+a {
       color: #ffff;
       text-decoration: none;
       &:hover {
         text-decoration: none;
        }
+  }
+
+.bg-letter {
+    background-image: url(../img/letter.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+input, textarea, select, button {
+    font: inherit;
   }
