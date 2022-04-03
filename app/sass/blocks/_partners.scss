@@ -1,0 +1,169 @@
+.partners {
+    &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 120px);
+}   
+    &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    text-align: center;
+    }
+    &__hillel {
+        display: block;
+        margin: auto;
+        padding: 36px 0;
+        &--bg{
+            background-color:  #1C4280;
+        }
+    }
+
+    &__wannabiz {
+        display: block;
+        margin: auto;
+        padding: 44px 0;
+        &--bg{
+            background-color:#143646;
+        }
+    }
+
+    &__tapgerine {
+        display: block;
+        margin: auto;
+        padding: 38px 0;
+        &--bg {
+            background-color:#F48B30;
+        }
+    }
+
+    &__3dlook {
+        display: block;
+        margin: auto;
+        padding: 39px 0;
+        &--bg {
+            background-color:#9E4DC3;
+        }
+    }
+
+    &__orangear {
+        display: block;
+        margin: auto;
+        padding: 38px 0;
+        &--bg {
+            background-color:#FD9339;
+        }
+    }
+
+    &__adtelligent {
+        display: block;
+        margin: auto;
+        padding: 36px 0;
+        &--bg {
+            background-color:#E2E2E4;
+        }
+    }
+
+    &__clickky {
+        display: block;
+        margin: auto;
+        padding: 30px 0;
+        &--bg {
+            background-color:#C71C36;
+        }
+    }
+
+    &__ecolease {
+        display: block;
+        margin: auto;
+        padding: 22px 0;
+        &--bg {
+            background-color:#DCF3F9;
+        }
+    }
+
+    &__infratek {
+        display: block;
+        margin: auto;
+        padding: 30px 0;
+        &--bg {
+            background-color:#EAEAEA;
+        }
+    }
+
+    &__citypark {
+        display: block;
+        margin: auto;
+        padding: 41px 0;
+        &--bg {
+            background-color: #282240;
+        }
+    }
+
+    &__artprint {
+        display: block;
+        margin: auto;
+        padding: 37px 0;
+        &--bg {
+            background-color:#1D4568;
+        }
+    }
+
+    &__ultimatecard {
+        display: block;
+        margin: auto;
+        padding: 13px 0;
+        &--bg {
+            background-color:#000000;
+        }
+    }
+
+}
+.partners--hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) { 
+    .partners--hidden {
+        display: contents;
+    }
+    .partners {
+        &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 120px);
+        }   
+    }
+
+}
+
+@media screen and (min-width: 992px) { 
+    .partners--hidden {
+        display: contents;
+    }
+    .partners {
+        &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 120px);
+        }   
+    }
+
+}
+
+@media screen and (min-width: 1201px) { 
+    .partners--hidden {
+        display: contents;
+    }
+    .partners {
+        &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 120px);
+        }   
+    }
+
+}

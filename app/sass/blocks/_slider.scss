@@ -5,10 +5,21 @@
 
 .slider {
     margin-top: 100px;
+    margin-bottom: 60px;
     &__page {
         background-color: #F5F5FA;
         border-radius: 12px;
-        display: flex;
+        // display: flex;
+        // flex-direction: column;
+    }
+    &__info {
+        padding: 30px;
+    }
+    &__pic {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px 12px 0px 0px;
     }
     &__link {
         font-weight: 700;
@@ -19,13 +30,13 @@
         color: #24A3FF;
         &::after {
             content: '';
-        border: solid #24A3FF;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        margin-left: 3px;
+            border: solid #24A3FF;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            margin-left: 3px;
         }
     }
     &__name {
@@ -35,18 +46,30 @@
     background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
     }
     &__text {
         font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #B3B3BA;
+        font-size: 16px;
+        line-height: 20px;
+        color: #B3B3BA;
         &-extra {
             font-size: 14px;
-        line-height: 22px;
-        color: #B3B3BA;
+            line-height: 22px;
+            color: #B3B3BA;
         }
     }
     
+}
+
+// @media screen and (min-width: 768px) {
+
+// }
+
+@media screen and (min-width: 992px) {
+.slider {
+    &__page {
+        display: flex;
+    }
+}
+        
 }
