@@ -2,7 +2,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/montserrat-v23-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v23-latin-regular.woff") format("woff");
+  src: url("../fonts/montserrat-v23-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v23-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/montserrat-v23-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v23-latin-700.woff") format("woff");
+  src: url("../fonts/montserrat-v23-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v23-latin_cyrillic-700.woff") format("woff");
 }
 
 * {
@@ -32,10 +32,10 @@
 }
 
 .container {
-  max-width: 1335px;
+  max-width: 1320px;
   min-width: 375px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 .visually-hidden {
@@ -79,12 +79,53 @@ input, textarea, select, button {
 .bg--gradient {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
+  position: relative;
+}
+
+.bg--gradient::after {
+  content: '';
+  background: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+  height: 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  right: 20px;
+}
+
+.bg--gradient::before {
+  content: '';
+  background: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+  height: 10px;
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  right: 40px;
 }
 
 .header__address,
-.header__facebook,
-.header__menu-list {
+.header__facebook {
   display: none;
+}
+
+.header__main-menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.header__menu-list {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  background-color: #FFFFFF;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .header__language-switch {
@@ -382,12 +423,6 @@ input, textarea, select, button {
   border-top: 4px solid rgba(255, 255, 255, 0.3);
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 0 60px;
-  }
-}
-
 @media screen and (min-width: 992px) {
   .achievements {
     display: -webkit-box;
@@ -429,7 +464,115 @@ input, textarea, select, button {
   }
 }
 
+.services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .services__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  padding-right: 3px;
+}
+
+.services__link::after {
+  content: '';
+  border: solid #24A3FF;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 3px;
+}
+
+.services__name {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services__icon {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 14px;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.services__item-name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+}
+
+.services__item-about {
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    padding-bottom: 60px;
+  }
+  .services__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+  .services__item {
+    width: 50%;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services {
+    padding-bottom: 60px;
+  }
+  .services__link {
+    margin-bottom: 10px;
+  }
+  .services__item {
+    width: 33%;
+  }
+}
+
+.background--white {
+  background: #FFFFFF;
+}
+
+.slider {
+  margin-top: 100px;
+}
+
+.slider__page {
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider__link {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -438,10 +581,37 @@ input, textarea, select, button {
   color: #24A3FF;
 }
 
-.services::after {
-  border: solid black;
+.slider__link::after {
+  content: '';
+  border: solid #24A3FF;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 3px;
+}
+
+.slider__name {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.slider__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B3B3BA;
+}
+
+.slider__text-extra {
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
 }
 /*# sourceMappingURL=style.css.map */

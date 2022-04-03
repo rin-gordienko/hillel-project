@@ -1,15 +1,59 @@
 .bg--gradient {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
+    position: relative;
+}
+
+.bg--gradient::after {
+    content: '';
+    background: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+}
+
+.bg--gradient::before {
+    content: '';
+    background: #E7E7F2;;
+    border-radius: 0px 0px 12px 12px;
+    height: 10px;
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
 }
 
 
 
 .header__address,
-.header__facebook,
-.header__menu-list {
+.header__facebook {
+// .header__menu-list { 
+    
     display: none;
 }
+
+.header__main-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.header__menu-list {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 0px 0px;;
+}
+
+// .header__menu-name {
+
+// }
+
 .header__language-switch {
     font-weight: 700;
     font-size: 12px;

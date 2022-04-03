@@ -1,3 +1,4 @@
+@import 'node_modules/slick-carousel/slick/slick.scss';
 @import 'variables';
 @import 'fonts';
 @import 'main';
@@ -7,3 +8,6 @@
 @import './blocks/main-header';
 @import './blocks/achievements';
 @import './blocks/services';
+@import './blocks/slider';
+@import './blocks/slick';
+
