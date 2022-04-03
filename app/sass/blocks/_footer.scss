@@ -1,0 +1,124 @@
+.footer {
+    margin-top: 30px;
+    // &__credits {
+    // }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-location {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-direct {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__address {
+        font-size: 16px;
+        line-height: 20px;
+        color: #323264;
+        margin-bottom: 10px;
+    }
+    &__map {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24A3FF;
+        margin-bottom: 21px;
+    }
+    &__phone {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #46466E;
+        margin-bottom: 10px;
+    }
+    &__facebook {
+        margin-bottom: 10px;
+    }
+    &__mail {
+        font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24A3FF;
+    margin-bottom: 30px;
+    }
+    &__corp {
+        font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #B3B3BA;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__credits {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__address::after {
+            content: "";
+            display: inline-block;
+            background: #B3B3BA;
+            border-radius: 50%;
+            height: 6px;
+            width: 6px;
+            vertical-align: middle;
+            margin: 0 10px 0;
+        }
+        &__contact {
+            flex-direction: column;
+            align-items: flex-start;
+            &-location {
+                flex-direction: row;
+                align-items: center;
+            }
+            &-direct {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        &__map {
+            margin-bottom: 8px;
+        }
+        &__phone {
+            margin-bottom: 0;
+            &::after {
+                content: "";
+                display: inline-block;
+                background: #B3B3BA;
+                border-radius: 50%;
+                height: 6px;
+                width: 6px;
+                vertical-align: middle;
+                margin: 0 10px 0;
+            }
+            &::before {
+                content: "";
+                display: inline-block;
+                background: #B3B3BA;
+                border-radius: 50%;
+                height: 6px;
+                width: 6px;
+                vertical-align: middle;
+                margin: 0 10px 0;
+            }
+            
+        }
+        &__facebook {
+            margin-bottom: 0;
+        }
+        &__mail {
+        margin-bottom: 0;
+        }
+    }   
+}
