@@ -12,8 +12,8 @@
 }
 
 .container {
-    max-width: 1320px;
-    min-width: 375px;
+    max-width: 1350px;
+    min-width: 405px;
     margin: 0 auto;
     padding: 0 15px;
 
@@ -35,7 +35,7 @@
 .img-responsive {
       max-width: 100%;
       height: auto;
-  }
+}
 
 a {
       color: #ffff;
@@ -44,6 +44,7 @@ a {
         text-decoration: none;
        }
   }
+
 
 .bg-letter {
     background-image: url(../img/letter.svg);

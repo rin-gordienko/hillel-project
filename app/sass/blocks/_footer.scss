@@ -20,7 +20,7 @@
     &__address {
         font-size: 16px;
         line-height: 20px;
-        color: #323264;
+        color: $colorblue;
         margin-bottom: 10px;
     }
     &__map {
@@ -29,7 +29,7 @@
         line-height: 15px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #24A3FF;
+        color: $colorblueregular;
         margin-bottom: 21px;
     }
     &__phone {
@@ -37,7 +37,7 @@
         font-size: 16px;
         line-height: 20px;
         text-align: right;
-        color: #46466E;
+        color: $colordarkgrey;
         margin-bottom: 10px;
     }
     &__facebook {
@@ -47,14 +47,14 @@
         font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    color: #24A3FF;
+    color: $colorblueregular;
     margin-bottom: 30px;
     }
     &__corp {
         font-size: 16px;
     line-height: 20px;
     text-align: center;
-    color: #B3B3BA;
+    color: $colorgreytext;
     }
 }
 
@@ -68,7 +68,7 @@
         &__address::after {
             content: "";
             display: inline-block;
-            background: #B3B3BA;
+            background: $colorgreytext;
             border-radius: 50%;
             height: 6px;
             width: 6px;
@@ -95,7 +95,7 @@
             &::after {
                 content: "";
                 display: inline-block;
-                background: #B3B3BA;
+                background: $colorgreytext;
                 border-radius: 50%;
                 height: 6px;
                 width: 6px;
@@ -105,7 +105,7 @@
             &::before {
                 content: "";
                 display: inline-block;
-                background: #B3B3BA;
+                background: $colorgreytext;
                 border-radius: 50%;
                 height: 6px;
                 width: 6px;

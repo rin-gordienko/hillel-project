@@ -1,4 +1,13 @@
 .anchor {
-    display: block;  
-    text-align:center;
+    display: flex;  
+    justify-content: space-around;
+    align-self: auto;
+    &:hover circle {
+        stroke: $colorpink;
+    }
+    &:hover path {
+        stroke: $colorpink;
+    }
 }
+
+

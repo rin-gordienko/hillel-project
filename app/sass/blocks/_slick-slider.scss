@@ -13,12 +13,12 @@
         height: 16px;
         border-radius: 50%;
         border: none;
-        background-color: rgba(36, 163, 255, 0.2);
+        background-color: $colorbggrey;
     }
 }
 
 .slick-dots li.slick-active button {
-    background-color: rgba(36, 163, 255, 1);
+    background-color: $colorbgslide;
 } 
 
 // @media screen and (min-width: 992px) {
