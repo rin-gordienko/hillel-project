@@ -59,6 +59,12 @@ a {
     background-size: auto 100%;
 }
 
+.team-bg {
+    background-image: url(../img/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 input, textarea, select, button {
     font: inherit;
   }

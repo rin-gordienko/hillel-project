@@ -215,6 +215,12 @@ a:hover {
   background-size: auto 100%;
 }
 
+.team-bg {
+  background-image: url(../img/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 input, textarea, select, button {
   font: inherit;
 }
@@ -246,7 +252,7 @@ input, textarea, select, button {
   position: relative;
 }
 
-.header__address, .header__facebook {
+.header__address, .header__address-grey, .header__facebook {
   display: none;
 }
 
@@ -311,6 +317,40 @@ input, textarea, select, button {
   border-radius: 8px;
 }
 
+.header__language-switch--active {
+  background-color: #F0145A;
+  border-radius: 8px;
+}
+
+.header__language-switch-grey {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #b3b3ba;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 5px;
+}
+
+.header__language-switch-grey:focus {
+  background-color: #F0145A;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.header__language-switch-grey:hover {
+  background: grey;
+  border-radius: 8px;
+}
+
+.header__language-switch-grey--active {
+  background-color: #F0145A;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
 .header__extra {
   display: none;
 }
@@ -326,6 +366,20 @@ input, textarea, select, button {
 }
 
 .header__phone:hover {
+  color: #F0145A;
+}
+
+.header__phone-grey {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #B3B3BA;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.header__phone-grey:hover {
   color: #F0145A;
 }
 
@@ -366,6 +420,21 @@ input, textarea, select, button {
   vertical-align: middle;
 }
 
+.header__menu-btn-grey {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__menu-btn-grey:hover {
+  background: #E6E6F0;
+  border-radius: 8px;
+}
+
+.header__menu-btn-grey svg {
+  vertical-align: middle;
+}
+
 .header__menu-name {
   color: #24A3FF;
 }
@@ -376,7 +445,7 @@ input, textarea, select, button {
     grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
     grid-template-rows: min-content min-content min-content;
   }
-  .header__address, .header__facebook, .header__menu-list {
+  .header__address, .header__address-grey, .header__facebook, .header__menu-list {
     display: block;
   }
   .header__facebook:hover svg path {
@@ -390,6 +459,22 @@ input, textarea, select, button {
     color: #FFFFFF;
   }
   .header__address::after {
+    content: "";
+    display: inline-block;
+    background: #E6E6F0;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    vertical-align: middle;
+    margin: 0 6px 0;
+  }
+  .header__address-grey {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #B3B3BA;
+  }
+  .header__address-grey::after {
     content: "";
     display: inline-block;
     background: #E6E6F0;
@@ -491,7 +576,7 @@ input, textarea, select, button {
     display: flex;
     padding: 20px 0 18px;
   }
-  .header__menu-btn {
+  .header__menu-btn, .header__menu-btn-grey {
     display: none;
   }
   .header__logo {
@@ -507,6 +592,19 @@ input, textarea, select, button {
     padding-bottom: 3px;
   }
   .header__menu-name:active {
+    color: #F0145A;
+    border-bottom: 2px solid #F0145A;
+    padding-bottom: 3px;
+  }
+  .header__menu-name-blue {
+    margin-right: 16px;
+    color: #24A3FF;
+  }
+  .header__menu-name-blue:hover {
+    border-bottom: 2px solid #24A3FF;
+    padding-bottom: 3px;
+  }
+  .header__menu-name-blue:active {
     color: #F0145A;
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
@@ -541,7 +639,7 @@ input, textarea, select, button {
     margin: 0 5px 0 6px;
   }
   .header__language::after {
-    margin: 0 2px 0 0;
+    margin: 0 4px 0 0;
   }
   .header__address::after {
     margin: 0 7px 0 6px;
@@ -1550,7 +1648,7 @@ input, textarea, select, button {
   background: #FFFFFF;
 }
 
-.bg-greyish .bg-grey {
+.bg-on-white {
   position: absolute;
   font-size: 0;
   width: 100%;
@@ -1562,9 +1660,46 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 768px) {
-  .bg-greyish .bg-grey {
+  .bg-on-white {
     display: none;
   }
+}
+
+.pros__text-about {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.pros__graph-number {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.pros__graph-info {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+
+.team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 13px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  height: 114px;
 }
 
 /*# sourceMappingURL=style.css.map */
