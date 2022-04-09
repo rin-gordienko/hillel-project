@@ -13,7 +13,7 @@
     <div class="bg--gradient">
 
         <div class="bg-letter">
-            <header class="header container">
+            <header class="header container-header">
                 <div class="header__line">
                     <div class="bg-grey">1</div>
                     <div class="header__language">
@@ -59,7 +59,7 @@
                 
                 <nav class="header__main-menu">
                     <button type="button" class="header__menu-btn">
-                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="32" height="32" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 10.5H25" stroke="white" stroke-width="2"/>
                             <path d="M7 16.5H25" stroke="white" stroke-width="2"/>
                             <path d="M7 22.5H25" stroke="white" stroke-width="2"/>
@@ -79,7 +79,7 @@
             <main class="container">
                 <section class="main-header">
                     <h1 class="headline">you legal solutions provider</h1>
-                    <a href="#" class="anchor">
+                    <a href="#services" class="anchor">
                         <svg  width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2"/>
                             <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
@@ -116,7 +116,7 @@
                     </article>
                 </section>
 
-                <section class="services">
+                <section class="services" id="services">
                     <a href="#" class="services__link link">Services</a>
                     <h2 class="services__name title">What can we do better than others?</h2>
                     <div class="services__list">
@@ -139,7 +139,7 @@
                                     </svg>
                                     
                             </p>
-                            <h3 class="services__item-name">IT and e-commerce</h3>
+                            <a href="#"><h3 class="services__item-name">IT and e-commerce</h3></a>
                             <p class="services__item-about">An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.</p>
                         </article>
                         <article class="services__item">
@@ -168,8 +168,8 @@
                                 </defs>
                                 </svg>
                                 </p>
-                            <h3 class="services__item-name">Comprehensive daily
-                                legal support</h3>
+                            <a href="#"><h3 class="services__item-name">Comprehensive daily
+                                legal support</h3></a>
                             <p class="services__item-about">In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.</p>
                         </article>
                         <article class="services__item">
@@ -190,7 +190,7 @@
                                 </defs>
                                 </svg>
                                 </p>
-                            <h3 class="services__item-name">Structuring corporate relationships</h3>
+                            <a href="#"><h3 class="services__item-name">Structuring corporate relationships</h3></a>
                             <p class="services__item-about">Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.</p>
                         </article>
                         <article class="services__item">
@@ -229,7 +229,7 @@
                                 </defs>
                                 </svg>
                                 </p>
-                            <h3 class="services__item-name">Building contractual relations</h3>
+                            <a href="#"><h3 class="services__item-name">Building contractual relations</h3></a>
                             <p class="services__item-about">Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.</p>
                         </article>
                         <article class="services__item">
@@ -250,7 +250,7 @@
                                     </svg>
                                     
                             </p>
-                            <h3 class="services__item-name">Protection of business, intellectual property</h3>
+                            <a href="#"><h3 class="services__item-name">Protection of business, intellectual property</h3></a>
                             <p class="services__item-about">And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.</p>
                         </article>
                         <article class="services__item">
@@ -279,7 +279,7 @@
                                 </defs>
                                 </svg>
                                 </p>
-                            <h3 class="services__item-name">Judicial representation</h3>
+                            <a href="#"><h3 class="services__item-name">Judicial representation</h3></a>
                             <p class="services__item-about">Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?</p>
                         </article>
                     </div>
@@ -291,32 +291,38 @@
 
     <div class="bg--white">
         <div class="container">
-            <section class="slider">
+            <section class="slider js-slider">
                 <article class="slider__page">
-                    <img class="slider__pic" src="./img/slider.jpg" alt="">
-                    <div class="slider__info">
-                        <a href="#" class="slider__link link">команда</a>
-                        <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
-                        <p class="slider__text">Олександр Олександровський</p>
-                        <p class="slider__text-extra">Керуючий партнер</p>
+                    <div class="slider__page-wrapper">
+                        <img class="slider__pic" src="./img/slider.jpg" alt="">
+                        <div class="slider__info">
+                            <a href="#" class="slider__link link">команда</a>
+                            <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                            <p class="slider__text">Олександр Олександровський</p>
+                            <p class="slider__text-extra">Керуючий партнер</p>
+                        </div>
                     </div>
                 </article>
                 <article class="slider__page">
-                    <img class="slider__pic" src="./img/slider.jpg" alt="">
-                    <div class="slider__info">
-                        <a href="#" class="slider__link link">команда</a>
-                        <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
-                        <p class="slider__text">Олександр Олександровський</p>
-                        <p class="slider__text-extra">Керуючий партнер</p>
+                    <div class="slider__page-wrapper">
+                        <img class="slider__pic" src="./img/slider.jpg" alt="">
+                        <div class="slider__info">
+                            <a href="#" class="slider__link link">команда</a>
+                            <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                            <p class="slider__text">Олександр Олександровський</p>
+                            <p class="slider__text-extra">Керуючий партнер</p>
+                        </div>
                     </div>
                 </article>
                 <article class="slider__page">
-                    <img class="slider__pic" src="./img/slider.jpg" alt="">
-                    <div class="slider__info">
-                        <a href="#" class="slider__link link">команда</a>
-                        <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
-                        <p class="slider__text">Олександр Олександровський</p>
-                        <p class="slider__text-extra">Керуючий партнер</p>
+                    <div class="slider__page-wrapper">
+                        <img class="slider__pic" src="./img/slider.jpg" alt="">
+                        <div class="slider__info">
+                            <a href="#" class="slider__link link">команда</a>
+                            <h2 class="slider__name title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
+                            <p class="slider__text">Олександр Олександровський</p>
+                            <p class="slider__text-extra">Керуючий партнер</p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -325,41 +331,41 @@
             <p class="partners__text">They already trust us</p>
             <article class="partners__grid">
                 <div class="partners__pic partners__hillel--bg">
-                    <img class="partners__hillel" src="./img/hillel.png" alt="">
+                    <a href="#"><img class="partners__hillel" src="./img/hillel.png" alt=""></a>
                 </div>
                 <div class="partners__pic partners__wannabiz--bg">
-                    <img class="partners__wannabiz" src="./img/wannabiz.png" alt="">
+                    <a href="#"><img class="partners__wannabiz" src="./img/wannabiz.png" alt=""></a>
                 </div>
                 <div class="partners__pic partners__tapgerine--bg">
-                    <img class="partners__tapgerine" src="./img/tapgerine.png" alt="">
+                    <a href="#"><img class="partners__tapgerine" src="./img/tapgerine.png" alt=""></a>
                 </div>
                 <div class="partners__pic partners__3dlook--bg">
-                    <img class="partners__3dlook" src="./img/3dlook.png" alt="">
+                    <a href="#"><img class="partners__3dlook" src="./img/3dlook.png" alt=""></a>
                 </div>
                 <div class="partners__pic partners__orangear--bg">
-                    <img class="partners__orangear" src="./img/orangear.png" alt="">
+                    <a href="#"><img class="partners__orangear" src="./img/orangear.png" alt=""></a>
                 </div>
                 <div class="partners__pic partners__adtelligent--bg">
-                    <img class="partners__adtelligent" src="./img/adtelligent.png" alt="">
+                    <a href="#"><img class="partners__adtelligent" src="./img/adtelligent.png" alt=""></a>
                 </div>
                 <div class="partners--hidden">
                     <div class="partners__pic partners__clickky--bg">
-                        <img class="partners__clickky" src="./img/clickky.png" alt="">
+                        <a href="#"><img class="partners__clickky" src="./img/clickky.png" alt=""></a>
                     </div>
                     <div class="partners__pic partners__ecolease--bg">
-                        <img class="partners__ecolease" src="./img/ecolease.png " alt="">
+                        <a href="#"><img class="partners__ecolease" src="./img/ecolease.png " alt=""></a>
                     </div>
                     <div class="partners__pic partners__infratek--bg">
-                        <img class="partners__infratek" src="./img/infratek.png" alt="">
+                        <a href="#"><img class="partners__infratek" src="./img/infratek.png" alt=""></a>
                     </div>
                     <div class="partners__pic partners__citypark--bg">
-                        <img class="partners__citypark" src="./img/citypark.png" alt="">
+                        <a href="#"><img class="partners__citypark" src="./img/citypark.png" alt=""></a>
                     </div>
                     <div class="partners__pic partners__artprint--bg">
-                        <img class="partners__artprint" src="./img/artprint.png" alt="">
+                        <a href="#"><img class="partners__artprint" src="./img/artprint.png" alt=""></a>
                     </div>
                     <div class="partners__pic partners__ultimatecard--bg">
-                        <img class="partners__ultimatecard" src="./img/ultimatecard.png" alt="">
+                        <a href="#"><img class="partners__ultimatecard" src="./img/ultimatecard.png" alt=""></a>
                     </div>
                 </div>
             </article>
@@ -373,9 +379,9 @@
                         <div class="publications__wrapper">
                             <article class="publications__item">
                                 <div class="publications__item-box">
-                                    <img class="publications__pic" src="./img/publ-1.jpg" alt="">
+                                    <a href="#"><img class="publications__pic" src="./img/publ-1.jpg" alt=""></a>
                                     <div class="publications__text">
-                                        <h4 class="publications__item-title">Equity associate</h4>
+                                        <a href="#"><h4 class="publications__item-title">Equity associate</h4></a>
                                         <p class="publications__item-data">April 22</p>
                                         <p class="publications__item-text">I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…</p>
                                     </div>
@@ -383,9 +389,9 @@
                             </article>
                             <article class="publications__item">
                                 <div class="publications__item-box">
-                                    <img class="publications__pic" src="./img/publ-2.jpg" alt="">
+                                    <a href="#"><img class="publications__pic" src="./img/publ-2.jpg" alt=""></a>
                                     <div class="publications__text">
-                                        <h4 class="publications__item-title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4>
+                                        <a href="#"><h4 class="publications__item-title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4></a>
                                         <p class="publications__item-data">September 29</p>
                                         <p class="publications__item-text">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
                                     </div>
@@ -394,9 +400,9 @@
                         </div>
                         <article class="publications__item">
                             <div class="publications__item-box">
-                                <img class="publications__pic" src="./img/publ-3.jpg" alt="">
+                                <a href="#"><img class="publications__pic" src="./img/publ-3.jpg" alt=""></a>
                                 <div class="publications__text">
-                                    <h4 class="publications__item-title">Millennial Testament</h4>
+                                    <a href="#"><h4 class="publications__item-title">Millennial Testament</h4></a>
                                     <p class="publications__item-data">August 19</p>
                                     <p class="publications__item-text">What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
                                 </div>

@@ -2,36 +2,38 @@
     &__list {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, min-content);
     row-gap: 30px;
 }
 
-    // &__name {
-    //     font-weight: 700;
-    //     font-size: 30px;
-    //     line-height: 37px;
-    //     background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-    //     -webkit-background-clip: text;
-    //     -webkit-text-fill-color: transparent;
-    //     // margin-top: 0;
-    // }
+    &__name {
+        margin-bottom: 31px;
+        margin-top: 7px;
+    }
     &__icon {
         background: $colorwhite;
         border-radius: 24px;
-        padding: 14px;
         display: inline-block;
-        margin-top: 0;
+        padding: 12px 14px;
+        margin-bottom: 29px;
     }
     &__item-name {
         font-weight: 700;
         font-size: 22px;
         line-height: 27px;
         color: $colorblueregular;
+        &:hover {
+            color: #0085FF;
+        }
+        &:active {
+            color: #006CCF;
+        }
     }
     &__item-about {
         font-size: 16px;
         line-height: 26px;
         color: $colorwhite;
+        margin-top: 16px;
     }
 }
 
@@ -40,9 +42,13 @@
         padding-bottom: 60px;
         &__list {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(3, min-content);
             row-gap: 60px;
             column-gap: 60px;
+        }
+        &__name {
+            margin-top: 9px;
+            margin-bottom: 60px;
         }
         // &__item {
            
@@ -60,9 +66,18 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
         }
+        &__name {
+            margin-bottom: 58px;
+        }
     }
 }
 
-// @media screen and (min-width: 1201px) {
+@media screen and (min-width: 1201px) {
+    .services {
+        &__name {
+            margin-top: 10px;
+            margin-bottom: 60px;
+        }
+    }
 
-// }
+}

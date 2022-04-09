@@ -168,7 +168,14 @@
 
 .container {
   max-width: 1350px;
-  min-width: 405px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-header {
+  max-width: 1350px;
+  min-width: 375px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -205,10 +212,29 @@ a:hover {
   background-image: url(../img/letter.svg);
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 input, textarea, select, button {
   font: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 60px;
+  }
+  .container-header {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    padding: 0 15px;
+  }
+  .container-header {
+    padding: 0 15px;
+  }
 }
 
 .header {
@@ -220,8 +246,12 @@ input, textarea, select, button {
   position: relative;
 }
 
-.header__address, .header__facebook, .header__menu-list {
+.header__address, .header__facebook {
   display: none;
+}
+
+.header__language {
+  z-index: 1;
 }
 
 .header__main-menu {
@@ -236,12 +266,27 @@ input, textarea, select, button {
 }
 
 .header__menu-list {
+  display: none;
   position: absolute;
-  right: -100%;
-  top: 0;
+  right: -10%;
+  top: 43px;
   background-color: #FFFFFF;
-  border-radius: 12px 12px 0px 0px;
-  overflow: hidden;
+  width: 350px;
+  border-radius: 12px;
+  padding: 12px;
+  padding-top: 52px;
+}
+
+.header__menu-list li {
+  list-style: none;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 7px 0;
 }
 
 .header__language-switch {
@@ -253,7 +298,7 @@ input, textarea, select, button {
   color: #FFFFFF;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 5px 7px;
+  padding: 5px 5px;
 }
 
 .header__language-switch:focus {
@@ -277,6 +322,11 @@ input, textarea, select, button {
   text-align: right;
   color: #FFFFFF;
   text-decoration: none;
+  z-index: 1;
+}
+
+.header__phone:hover {
+  color: #F0145A;
 }
 
 .header__line {
@@ -287,21 +337,37 @@ input, textarea, select, button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 0 10px 0;
+  padding: 7px 0 12px 0;
+  margin-bottom: 10px;
 }
 
 .header__logo-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px 0 10px;
+}
+
+.header__logo-box a {
+  margin-top: 5px;
 }
 
 .header__menu-btn {
   background: none;
   border: none;
-  padding: 12px 0 12px;
   cursor: pointer;
+}
+
+.header__menu-btn:hover {
+  background: rgba(230, 230, 240, 0.2);
+  border-radius: 8px;
+}
+
+.header__menu-btn svg {
+  vertical-align: middle;
+}
+
+.header__menu-name {
+  color: #24A3FF;
 }
 
 @media screen and (min-width: 768px) {
@@ -349,13 +415,18 @@ input, textarea, select, button {
     display: flex;
     padding: 0;
     list-style: none;
+    position: static;
+    background-color: transparent;
+    border-radius: none;
+    width: 100%;
+  }
+  .header__menu-list li {
+    background-color: transparent;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    position: static;
-    background-color: transparent;
-    border-radius: none;
+    margin: 0;
   }
   .header__language::after {
     content: "";
@@ -365,7 +436,7 @@ input, textarea, select, button {
     height: 6px;
     width: 6px;
     vertical-align: middle;
-    margin: 0 6px 0;
+    margin: 0 5px 0 0;
   }
   .header__language-switch {
     font-weight: 700;
@@ -376,7 +447,7 @@ input, textarea, select, button {
     color: #FFFFFF;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 7px;
+    padding: 5px 6px;
   }
   .header__language-switch:focus {
     background-color: #F0145A;
@@ -411,12 +482,14 @@ input, textarea, select, button {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    padding: 24px 0 0 0;
+    margin-bottom: 0;
   }
   .header__logo-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 15px 0 10px;
+    padding: 20px 0 18px;
   }
   .header__menu-btn {
     display: none;
@@ -426,7 +499,8 @@ input, textarea, select, button {
     height: 60px;
   }
   .header__menu-name {
-    margin-right: 15px;
+    margin-right: 16px;
+    color: #FFFFFF;
   }
   .header__menu-name:hover {
     border-bottom: 2px solid #FFFFFF;
@@ -450,6 +524,7 @@ input, textarea, select, button {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     align-self: center;
+    padding: 19px 0 6px;
   }
   .header__line {
     grid-column: 2 / -1;
@@ -457,9 +532,25 @@ input, textarea, select, button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    padding: 26px 0px 0px 0px;
   }
   .header__main-menu {
     justify-self: end;
+  }
+  .header__phone::after {
+    margin: 0 5px 0 6px;
+  }
+  .header__language::after {
+    margin: 0 2px 0 0;
+  }
+  .header__address::after {
+    margin: 0 7px 0 6px;
+  }
+  .header__menu-name {
+    margin: 0 0 0 15px;
+  }
+  .header__menu-list li {
+    padding: 0;
   }
 }
 
@@ -469,21 +560,28 @@ input, textarea, select, button {
   line-height: 46px;
   text-align: center;
   color: #FFFFFF;
-  margin-top: 129px;
-  padding-bottom: 159px;
+  margin-top: 134px;
+  padding-bottom: 160px;
 }
 
 @media screen and (min-width: 768px) {
   .headline {
     margin-top: 269px;
-    padding-bottom: 417px;
+    padding-bottom: 415px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .headline {
-    margin-top: 261px;
-    padding-bottom: 305px;
+    padding-bottom: 288px;
+    margin-top: 241px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .headline {
+    padding-bottom: 304px;
+    margin-top: 257px;
   }
 }
 
@@ -506,11 +604,12 @@ input, textarea, select, button {
 }
 
 .main-header {
-  padding-bottom: 30px;
+  padding-bottom: 29px;
 }
 
 .achievements {
   padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 .achievements__list {
@@ -521,7 +620,7 @@ input, textarea, select, button {
   -ms-overflow-style: none;
   scrollbar-width: none;
   margin-right: -15px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .achievements__list::-webkit-scrollbar {
@@ -538,7 +637,8 @@ input, textarea, select, button {
   font-size: 30px;
   line-height: 37px;
   color: #B3B3BA;
-  margin-right: 30px;
+  margin-right: 31px;
+  padding: 1px 0;
 }
 
 .achievements__btn--active {
@@ -562,12 +662,33 @@ input, textarea, select, button {
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
+  padding-top: 31px;
 }
 
 .achievements__content-text {
   font-size: 19px;
   line-height: 30px;
   color: #FFFFFF;
+  padding-top: 31px;
+}
+
+@media screen and (min-width: 768px) {
+  .achievements {
+    margin-top: 61px;
+    padding-bottom: 59px;
+  }
+  .achievements__btn {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .achievements__list {
+    margin-bottom: 57px;
+  }
+  .achievements__content-name {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 61px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -598,39 +719,71 @@ input, textarea, select, button {
         -ms-flex-align: end;
             align-items: flex-end;
     overflow: visible;
-    padding-bottom: 10px;
-    padding-left: 60px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 31px;
     border-right: 4px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 0;
+  }
+  .achievements__btn {
+    font-size: 38px;
+    line-height: 46px;
+    margin: 15px 31px 13px 0;
   }
   .achievements__content {
     border-top: none;
-    margin-left: 60px;
+    margin-left: 73px;
     max-width: 50%;
+    padding-top: 0;
   }
-  .achievements__btn {
-    padding: 15px 0;
+  .achievements__content-name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 0px;
   }
 }
 
 @media screen and (min-width: 1201px) {
+  .achievements {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .achievements__content {
     max-width: 600px;
+    margin-top: 43px;
+  }
+  .achievements__content-text {
+    padding-top: 30px;
+  }
+  .achievements__list {
+    padding-right: 62px;
+  }
+  .achievements__btn {
+    margin: 15px 0 13px 18px;
   }
 }
 
 .services__list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, -webkit-min-content);
+  grid-template-rows: repeat(6, min-content);
   row-gap: 30px;
+}
+
+.services__name {
+  margin-bottom: 31px;
+  margin-top: 7px;
 }
 
 .services__icon {
   background: #FFFFFF;
   border-radius: 24px;
-  padding: 14px;
   display: inline-block;
-  margin-top: 0;
+  padding: 12px 14px;
+  margin-bottom: 29px;
 }
 
 .services__item-name {
@@ -640,10 +793,19 @@ input, textarea, select, button {
   color: #24A3FF;
 }
 
+.services__item-name:hover {
+  color: #0085FF;
+}
+
+.services__item-name:active {
+  color: #006CCF;
+}
+
 .services__item-about {
   font-size: 16px;
   line-height: 26px;
   color: #FFFFFF;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -652,11 +814,16 @@ input, textarea, select, button {
   }
   .services__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
     row-gap: 60px;
     -webkit-column-gap: 60px;
        -moz-column-gap: 60px;
             column-gap: 60px;
+  }
+  .services__name {
+    margin-top: 9px;
+    margin-bottom: 60px;
   }
 }
 
@@ -670,6 +837,16 @@ input, textarea, select, button {
   .services__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+  .services__name {
+    margin-bottom: 58px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .services__name {
+    margin-top: 10px;
+    margin-bottom: 60px;
   }
 }
 
@@ -703,13 +880,19 @@ input, textarea, select, button {
 }
 
 .slider {
-  margin-top: 100px;
+  margin-top: 49px;
   margin-bottom: 60px;
+}
+
+.slider__name {
+  margin-top: 3px;
+  margin-bottom: 31px;
 }
 
 .slider__page {
   background-color: #F5F5FA;
   border-radius: 12px;
+  margin-bottom: 23px;
 }
 
 .slider__info {
@@ -729,6 +912,7 @@ input, textarea, select, button {
   font-size: 16px;
   line-height: 20px;
   color: #B3B3BA;
+  margin-bottom: 5px;
 }
 
 .slider__text-extra {
@@ -737,11 +921,35 @@ input, textarea, select, button {
   color: #B3B3BA;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .slider__page {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slider__page-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .slider__pic {
+    border-radius: 12px 0px 0px 12px;
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .slider {
+    margin-bottom: 58px;
+  }
+  .slider__pic {
+    width: 100%;
+    height: 345px;
+  }
+  .slider__info {
+    padding: 29px 50px 30px 30px;
   }
 }
 
@@ -759,6 +967,7 @@ input, textarea, select, button {
   text-transform: uppercase;
   color: #323264;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .partners__hillel {
@@ -920,11 +1129,18 @@ input, textarea, select, button {
 
 .title {
   font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
+  font-size: 30px;
+  line-height: 37px;
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 .link {
@@ -947,8 +1163,22 @@ input, textarea, select, button {
   margin-left: 3px;
 }
 
+.link:hover {
+  color: #0085FF;
+}
+
+.link:active {
+  color: #006CCF;
+}
+
+@media screen and (min-width: 768px) {
+  .link::after {
+    margin-left: 0px;
+  }
+}
+
 .publications {
-  padding: 30px 0;
+  padding: 29px 0;
   border-bottom: 2px solid #E6E6F0;
 }
 
@@ -958,7 +1188,7 @@ input, textarea, select, button {
 
 .publications__list {
   margin: -15px 0;
-  padding-top: 30px;
+  padding-top: 28px;
 }
 
 .publications__item {
@@ -969,6 +1199,7 @@ input, textarea, select, button {
 .publications__item-box {
   height: auto;
   background-color: #FFFFFF;
+  border-radius: 8px;
 }
 
 .publications__item-title {
@@ -977,6 +1208,14 @@ input, textarea, select, button {
   line-height: 20px;
   color: #24A3FF;
   margin-bottom: 15px;
+}
+
+.publications__item-title:hover {
+  color: #0085FF;
+}
+
+.publications__item-title:active {
+  color: #006CCF;
 }
 
 .publications__item-data {
@@ -1002,6 +1241,7 @@ input, textarea, select, button {
 }
 
 .publications__pic {
+  border-radius: 8px 8px 0 0;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1049,14 +1289,15 @@ input, textarea, select, button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 29px;
   }
   .publications__item {
-    width: 33%;
+    width: 100%;
   }
 }
 
 .footer {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 .footer__contact {
@@ -1115,6 +1356,10 @@ input, textarea, select, button {
   margin-bottom: 21px;
 }
 
+.footer__map:hover {
+  color: #F0145A;
+}
+
 .footer__phone {
   font-weight: 700;
   font-size: 16px;
@@ -1125,7 +1370,12 @@ input, textarea, select, button {
 }
 
 .footer__facebook {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+}
+
+.footer__facebook:hover svg path {
+  fill: #F0145A;
+  stroke: #F0145A;
 }
 
 .footer__mail {
@@ -1136,6 +1386,10 @@ input, textarea, select, button {
   margin-bottom: 30px;
 }
 
+.footer__mail:hover {
+  color: #F0145A;
+}
+
 .footer__corp {
   font-size: 16px;
   line-height: 20px;
@@ -1144,17 +1398,15 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    padding-bottom: 30px;
+  }
   .footer__credits {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: grid;
+    grid-template-columns: -webkit-max-content -webkit-max-content;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: -webkit-max-content -webkit-max-content;
+    grid-template-rows: max-content max-content;
   }
   .footer__address::after {
     content: "";
@@ -1164,7 +1416,7 @@ input, textarea, select, button {
     height: 6px;
     width: 6px;
     vertical-align: middle;
-    margin: 0 10px 0;
+    margin: 0 8px 0;
   }
   .footer__contact {
     -webkit-box-orient: vertical;
@@ -1183,6 +1435,7 @@ input, textarea, select, button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 10px;
   }
   .footer__contact-direct {
     -webkit-box-orient: horizontal;
@@ -1225,17 +1478,31 @@ input, textarea, select, button {
   .footer__mail {
     margin-bottom: 0;
   }
+  .footer__corp {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer__credits {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__contact-location {
+    padding-bottom: 8px;
+  }
 }
 
 .bg-grey {
   position: absolute;
-  display: block;
   font-size: 0;
   width: 100%;
-  height: 45px;
+  height: 39px;
   top: 0%;
   right: 0%;
   background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1248,6 +1515,7 @@ input, textarea, select, button {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
   position: relative;
+  padding-bottom: 60px;
 }
 
 .bg--gradient::after {
@@ -1272,8 +1540,31 @@ input, textarea, select, button {
   right: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .bg--gradient {
+    padding-bottom: 0px;
+  }
+}
+
 .background--white {
   background: #FFFFFF;
+}
+
+.bg-greyish .bg-grey {
+  position: absolute;
+  font-size: 0;
+  width: 100%;
+  height: 39px;
+  top: 0%;
+  right: 0%;
+  background: #F5F5FA;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-greyish .bg-grey {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

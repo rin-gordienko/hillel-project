@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 30px;
+    margin-top: 32px;
     // &__credits {
     // }
     &__contact {
@@ -31,6 +31,9 @@
         text-transform: uppercase;
         color: $colorblueregular;
         margin-bottom: 21px;
+        &:hover {
+            color: $colorpink;
+        }
     }
     &__phone {
         font-weight: 700;
@@ -41,7 +44,11 @@
         margin-bottom: 10px;
     }
     &__facebook {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
+        &:hover svg path {
+            fill: $colorpink;
+            stroke: $colorpink;
+        }
     }
     &__mail {
         font-weight: 700;
@@ -49,6 +56,9 @@
     line-height: 20px;
     color: $colorblueregular;
     margin-bottom: 30px;
+    &:hover {
+        color: $colorpink;
+    }
     }
     &__corp {
         font-size: 16px;
@@ -60,10 +70,16 @@
 
 @media screen and (min-width: 768px) {
     .footer {
+        padding-bottom: 30px;
         &__credits {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: max-content max-content; 
+
+
         }
         &__address::after {
             content: "";
@@ -73,7 +89,7 @@
             height: 6px;
             width: 6px;
             vertical-align: middle;
-            margin: 0 10px 0;
+            margin: 0 8px 0;
         }
         &__contact {
             flex-direction: column;
@@ -81,6 +97,7 @@
             &-location {
                 flex-direction: row;
                 align-items: center;
+                padding-bottom: 10px;
             }
             &-direct {
                 flex-direction: row;
@@ -120,5 +137,25 @@
         &__mail {
         margin-bottom: 0;
         }
+    &__corp {
+        font-size: 15px;
+    }
     }   
+}
+
+@media screen and (min-width: 992px) {
+    .footer {
+  
+        &__credits {
+            justify-content: space-between;
+        }
+
+        &__contact {
+            &-location {
+                padding-bottom: 8px;
+            }
+            
+        }
+    }
+
 }

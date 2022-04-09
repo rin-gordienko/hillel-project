@@ -1,12 +1,13 @@
 .bg-grey {
     position: absolute;
-    display: block;
+    // display: block;
     font-size: 0;
     width: 100%;
-    height: 45px;
+    height: 39px;
     top: 0%;
     right: 0%;
     background: $bordergrey;
+    z-index: 0;
 }
 
 @media screen and (min-width: 768px) {

@@ -4,9 +4,11 @@
     grid-template-rows: min-content min-content;
     position: relative;
     &__address,
-    &__facebook,
-    &__menu-list { 
+    &__facebook { 
         display: none;
+    }
+    &__language {
+        z-index: 1;
     }
     &__main-menu {
         position: relative;
@@ -15,12 +17,26 @@
         overflow: hidden;
     }
     &__menu-list {
+        display: none;
         position: absolute;
-        right: -100%;
-        top: 0;
+        right: -10%;
+        top: 43px;
         background-color: $colorwhite;
-        border-radius: 12px 12px 0px 0px;
-        overflow: hidden;
+        width: 350px;
+        border-radius: 12px;
+        padding: 12px;
+        padding-top: 52px;
+        & li {
+            list-style: none;
+            background-color: #F5F5FA;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 7px 0;
+        }
     }
     &__language-switch {
         font-weight: 700;
@@ -31,7 +47,7 @@
         color: $colorwhite;
         text-transform: uppercase;
         text-decoration: none;
-        padding: 5px 7px;
+        padding: 5px 5px;
         &:focus {
             background-color: $colorpink;
             border-radius: 8px;
@@ -51,22 +67,43 @@
         text-align: right;
         color: $colorwhite;
         text-decoration: none;
+        z-index: 1;
+        &:hover {
+            color: $colorpink;
+        }
     }
     &__line {
         grid-column: 1 / -1;
         display: flex;
         justify-content: space-between;
-        padding: 10px 0 10px 0;
+        padding: 7px 0 12px 0;
+        margin-bottom: 10px;
     }
     &__logo-box {
         display: flex;
-        padding: 15px 0 10px;
+        // padding: 15px 0 10px;
+        & a {
+            margin-top: 5px;
+        }
     }
     &__menu-btn {
         background: none;
         border: none;
-        padding: 12px 0 12px;
+        // padding: 12px 0 12px;
         cursor: pointer;
+
+        &:hover {
+            // width: 32px;
+            // height: 32px;
+            background: rgba(230, 230, 240, 0.2);
+            border-radius: 8px;
+        }
+        & svg {
+            vertical-align: middle;
+        }
+    }
+    &__menu-name {
+        color: $colorblueregular;
     }
 }
 
@@ -85,9 +122,9 @@
         }
         &__address {
             font-size: 16px;
-        line-height: 20px;
-        text-align: right;
-        color: $colorwhite;
+            line-height: 20px;
+            text-align: right;
+            color: $colorwhite;
             &::after {
                 content: "";
                 display: inline-block;
@@ -109,14 +146,20 @@
             display: flex;
             padding: 0;
             list-style: none;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
-            text-align: right; 
             position: static;
             background-color: transparent;
             border-radius: none;
+            width: 100%;
+            & li {
+                background-color: transparent;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: right;
+                margin: 0;
+            }
         }
+
         &__language::after {
             content: "";
             display: inline-block;
@@ -125,7 +168,7 @@
             height: 6px;
             width: 6px;
             vertical-align: middle;
-            margin: 0 6px 0;
+            margin: 0 5px 0 0;
         }
         &__language-switch {
             font-weight: 700;
@@ -136,7 +179,7 @@
             color: $colorwhite;
             text-transform: uppercase;
             text-decoration: none;
-            padding: 5px 7px;
+            padding: 5px 6px;
             &:focus {
                 background-color: $colorpink;
                 border-radius: 8px;
@@ -169,10 +212,12 @@
         }
         &__line {
             justify-content: flex-start;
+            padding: 24px 0 0 0;
+            margin-bottom: 0;
         }
         &__logo-box {
             display: flex;
-            padding: 15px 0 10px;
+            padding: 20px 0 18px;
         }
         &__menu-btn {
             display: none;
@@ -182,7 +227,8 @@
             height: 60px;
         }
         &__menu-name {
-            margin-right: 15px;
+            margin-right: 16px;
+            color: $colorwhite;
             &:hover {
                 border-bottom: 2px solid $colorwhite;
                 padding-bottom: 3px;
@@ -207,14 +253,31 @@
             grid-column: 1 / 2;
             grid-row: 1 / -1;
             align-self: center; 
+            padding: 19px 0 6px;
         }
         &__line {
             grid-column: 2 / -1;
             grid-row: 1 / 2;
             justify-content: flex-end;
+            padding: 26px 0px 0px 0px;
         }
         &__main-menu {
             justify-self: end;
+        }
+        &__phone::after {
+            margin: 0 5px 0 6px;
+        }
+        &__language::after {
+            margin: 0 2px 0 0;
+        }
+        &__address::after {
+            margin: 0 7px 0 6px;
+        }
+        &__menu-name {
+            margin: 0 0 0 15px
+        }
+        &__menu-list li {
+            padding: 0;
         }
     }
 }

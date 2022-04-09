@@ -15,4 +15,21 @@
         -webkit-transform: rotate(-45deg);
         margin-left: 3px;
     }
+    &:hover {
+        color: #0085FF;
+    }
+    &:active {
+        color: #006CCF;
+    }
 }
+
+
+@media screen and (min-width: 768px) {
+    .link::after {
+        margin-left: 0px;
+    }
+            
+}
+
+
+
