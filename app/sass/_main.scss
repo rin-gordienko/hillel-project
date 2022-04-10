@@ -25,6 +25,10 @@
     padding: 0 15px;
 }
 
+.container--xxl {
+    padding: 0 30px;
+}
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -63,6 +67,7 @@ a {
     background-image: url(../img/about-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% auto;
 }
 
 input, textarea, select, button {
@@ -77,14 +82,26 @@ input, textarea, select, button {
 
         padding: 0 60px;
     }
+
+    .container--xxl {
+        padding: 0 60px;
+    }
 }
+
+
+
 
 @media screen and (min-width: 1201px) {
     .container {
         padding: 0 15px;
     }
+    
     .container-header {
 
         padding: 0 15px;
+    }
+
+    .container--xxl {
+        padding: 0 180px;
     }
 }

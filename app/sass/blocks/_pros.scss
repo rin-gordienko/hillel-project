@@ -1,24 +1,128 @@
 .pros {
+
+    &__text {
+        // margin-top: 29px;
+        padding-top: 9px;
+    }
+    &__pic {
+        padding-right: 13px;
+        padding-left: 3px;
+    }
     &__text-about {
         font-weight: 400;
-    font-size: 19px;
-    line-height: 30px;
-    color: #000000;
+        font-size: 19px;
+        line-height: 30px;
+        color: #000000;
+        margin-top: 20px;
     }
-    &__graph-number {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 44px;
-        text-align: center;
-        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+    &__graph {
+        border-left: 4px solid #E6E6F0; 
+        padding-left: 30px;
+        // margin-top: 9px;
+        margin-bottom: 29px;
+        &-item {
+  
+        }
+        &-space {
+            margin: 29px 0 39px 0;
+        }
+        &-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            padding-bottom: 11px;
+        }
+        &-number {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            text-align: center;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &-info {
+            font-size: 16px;
+            line-height: 20px;
+            color: #323264;
+        }
+        &-one::before {
+            content: url(.../img/one-flag.svg);
+        }
+}
+
+
+}
+
+
+@media screen and (min-width: 768px) { 
+    .pros__text {
+        padding-top: 8px;
+        
     }
-    &__graph-info {
-        font-size: 16px;
-        line-height: 20px;
-        color: #323264;
+    .pros__graph {
+        margin-bottom: 58px;
     }
 }
+
+@media screen and (min-width: 992px) { 
+    .pros {
+        margin-bottom: 58px;
+        display: flex;
+        &__info {
+            max-width: 57%;
+        }
+        &__text {
+            max-width: 90%;
+            &-0 {
+                margin-top: 0;
+            }
+        }
+        &__graph-space {
+            margin: 0px 0 38px 0;
+        }
+        &__pic {
+            padding-right: 11px;
+            padding-left: 2px;
+        }
+        &__graph {
+            margin-bottom: 150px;
+            max-width: 43%;
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 1201px) { 
+    .pros {
+        
+    margin-bottom: 0px;
+
+        &__info {
+            max-width: 64%;
+        }
+        &__text {
+            max-width: 100%;
+            &-0 {
+              
+            }
+        }
+        &__graph-space {
+         
+        }
+        &__pic {
+         
+        }
+        &__graph {
+        margin-bottom: 118px;
+        max-width: 36%;
+        padding-left: 33px;
+
+        }
+
+    }
+}
+

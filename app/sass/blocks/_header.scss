@@ -71,6 +71,7 @@
             text-transform: uppercase;
             text-decoration: none;
             padding: 5px 5px;
+            
             &:focus {
                 background-color: $colorpink;
                 border-radius: 8px;
@@ -88,8 +89,12 @@
         }
     }
     &__extra {
-        display: none;
+        font-size: 20px;
+        line-height: 24px;
+        color: #323264;
+        margin: 5px 0 0 4px;
     }
+
     &__phone {
         font-weight: 700;
         font-size: 16px;
@@ -165,6 +170,10 @@
     &__menu-name {
         color: $colorblueregular;
     }
+    &__logo-grey {
+        width: 70px;
+        height: 32px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -176,6 +185,10 @@
         &__facebook,
         &__menu-list { 
             display: block;
+        }
+        &__logo-grey {
+            width: 130px;
+            height: 60px;
         }
         &__facebook:hover svg path {
             fill: $colorpink;
@@ -209,7 +222,7 @@
                     height: 6px;
                     width: 6px;
                     vertical-align: middle;
-                    margin: 0 6px 0;
+                    margin: 0 7px 0;
                 }
             }
         }
@@ -265,9 +278,14 @@
                 background: $colorgreyish;
                 border-radius: 8px;
             }
+            &-grey {
+                margin-left: 1px;
+            }
         }
         &__extra {
-            display: none;
+            font-size: 36px;
+            line-height: 44px;
+            color: #323264;
         }
         &__phone {
             font-weight: 700;
@@ -286,6 +304,24 @@
                     vertical-align: middle;
                     margin: 0 6px 0;
                 }
+            &-grey {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: right;
+                color: #B3B3BA;
+                text-decoration: none;
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        background: $colorgreysep;
+                        border-radius: 50%;
+                        height: 6px;
+                        width: 6px;
+                        vertical-align: middle;
+                        margin: 0 6px 0;
+                    }
+            }
 
         }
         &__line {
@@ -339,7 +375,7 @@
 
 @media screen and (min-width: 992px) {
     .header {
-        grid-template-columns: min-content 1fr;
+        grid-template-columns: max-content 1fr;
         grid-template-rows: min-content min-content;
         &__logo-box {
             grid-column: 1 / 2;
@@ -360,13 +396,20 @@
             margin: 0 5px 0 6px;
         }
         &__language::after {
-            margin: 0 4px 0 0;
+            margin: 0 11px 0 0;
         }
         &__address::after {
             margin: 0 7px 0 6px;
         }
+        &__address-grey::after {
+            margin: 0 4px 0;
+        }
         &__menu-name {
-            margin: 0 0 0 15px
+            margin: 0 0 0 15px;
+            &-blue {
+                margin-left: 15px;
+                margin-right: 0;
+            }
         }
         &__menu-list li {
             padding: 0;

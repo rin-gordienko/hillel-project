@@ -8,5 +8,83 @@
     color: #FFFFFF;
     display: block;
     height: 114px;
+    padding: 35px 114px;
+    &__about {
+        margin-top: 31px;
+        &-info {
+            margin-bottom: 30px;
+        }
+        &-title {
+            padding-bottom: 60px;
+        }
+    }
 
+}
+
+@media screen and (min-width: 768px) {
+    .team {
+        height: 234px;
+        padding: 89px 220px;
+        font-size: 46px;
+        line-height: 56px;
+        letter-spacing: 63px;
+        &__about {
+            margin-top: 60px;
+            &-title {
+                padding-bottom: 60px;
+            }
+        }
+    
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .team {
+        font-weight: 700;
+        font-size: 86px;
+        line-height: 105px;
+        height: 311px;
+        padding: 103px 289px;
+        &__about {
+            display: flex;
+            padding-bottom: 31px;
+            &-info {
+                max-width: 60%;
+                padding-right: 50px;
+            }
+            &-title {
+                // padding-bottom: 60px;
+                // padding-left: 130px;
+                max-width: 40%;
+            }
+        }
+    
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .team {
+        font-size: 96px;
+        line-height: 117px;
+        height: 438px;
+        padding: 163px 481px 158px;
+        &__about {
+            display: flex;
+            padding-bottom: 31px;
+            &-info {
+                max-width: 65%;
+                padding-right: 0;
+            }
+            &-title {
+                // padding-bottom: 60px;
+                // padding-left: 130px;
+                
+                // padding-left: 59px;
+                max-width: 35%;
+                padding-left: 16px;
+            }
+        }
+    
+    }
 }
