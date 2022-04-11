@@ -4,40 +4,12 @@
     grid-template-rows: min-content min-content;
     position: relative;
     &__address,
-    &__address-grey,
+    &__address-about,
     &__facebook { 
         display: none;
     }
     &__language {
         z-index: 1;
-    }
-    &__main-menu {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-    }
-    &__menu-list {
-        display: none;
-        position: absolute;
-        right: -10%;
-        top: 43px;
-        background-color: $colorwhite;
-        width: 350px;
-        border-radius: 12px;
-        padding: 12px;
-        padding-top: 52px;
-        & li {
-            list-style: none;
-            background-color: #F5F5FA;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            text-align: center;
-            margin-bottom: 15px;
-            padding: 7px 0;
-        }
     }
     &__language-switch {
         font-weight: 700;
@@ -61,40 +33,66 @@
             background-color: $colorpink;
             border-radius: 8px;
         }
-        &-grey {
+        &-about {
             font-weight: 700;
             font-size: 12px;
             line-height: 15px;
             text-align: center;
             letter-spacing: 1px;    
-            color: #b3b3ba;
+            color: $colorgreytext;
             text-transform: uppercase;
             text-decoration: none;
             padding: 5px 5px;
-            
             &:focus {
                 background-color: $colorpink;
                 border-radius: 8px;
-                color: #FFFFFF;
-                }
+                color: $colorwhite;
+            }
             &:hover {
-                    background: grey;
-                    border-radius: 8px;
-                }
+                background: $colorgreybg;
+                border-radius: 8px;
+            }
             &--active {
-                    background-color: $colorpink;
-                    border-radius: 8px;
-                    color: #FFFFFF;
-                }
+                background-color: $colorpink;
+                border-radius: 8px;
+                color: $colorwhite;
+            }
+        }
+    }
+    &__main-menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    &__menu-list {
+        display: none;
+        position: absolute;
+        right: -10%;
+        top: 43px;
+        background-color: $colorwhite;
+        width: 350px;
+        border-radius: 12px;
+        padding: 12px;
+        padding-top: 52px;
+        & li {
+            list-style: none;
+            background-color: $colorgreybg;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 7px 0;
         }
     }
     &__extra {
         font-size: 20px;
         line-height: 24px;
-        color: #323264;
+        color: $colordarkblue;
         margin: 5px 0 0 4px;
     }
-
     &__phone {
         font-weight: 700;
         font-size: 16px;
@@ -106,17 +104,17 @@
         &:hover {
             color: $colorpink;
         }
-        &-grey {
+        &-about {
             font-weight: 700;
             font-size: 16px;
             line-height: 20px;
             text-align: right;
-            color: #B3B3BA;;
+            color: $colorgreytext;
             text-decoration: none;
             z-index: 1;
             &:hover {
-                color: $colorpink;
-        }
+            color: $colorpink;
+            }
         }
     }
     &__line {
@@ -125,11 +123,9 @@
         justify-content: space-between;
         padding: 7px 0 12px 0;
         margin-bottom: 10px;
-
     }
     &__logo-box {
         display: flex;
-        // padding: 15px 0 10px;
         & a {
             margin-top: 5px;
         }
@@ -137,40 +133,31 @@
     &__menu-btn {
         background: none;
         border: none;
-        // padding: 12px 0 12px;
         cursor: pointer;
-
         &:hover {
-            // width: 32px;
-            // height: 32px;
-            background: rgba(230, 230, 240, 0.2);
-            border-radius: 8px;
+        background: rgba(230, 230, 240, 0.2);
+        border-radius: 8px;
         }
         & svg {
-            vertical-align: middle;
+        vertical-align: middle;
         }
-        &-grey {
-            background: none;
+        &-about {
+        background: none;
         border: none;
-        // padding: 12px 0 12px;
         cursor: pointer;
-
-        &:hover {
-            // width: 32px;
-            // height: 32px;
-            background: #E6E6F0;
+            &:hover {
+            background: $colorgreysep;
             border-radius: 8px;
-        }
-        & svg {
+            }
+            & svg {
             vertical-align: middle;
-        }
+            }
         }
     }
-
     &__menu-name {
         color: $colorblueregular;
     }
-    &__logo-grey {
+    &__logo-about {
         width: 70px;
         height: 32px;
     }
@@ -181,12 +168,12 @@
         grid-template-columns: 1fr;
         grid-template-rows: min-content min-content min-content;
         &__address,
-        &__address-grey,
+        &__address-about,
         &__facebook,
         &__menu-list { 
             display: block;
         }
-        &__logo-grey {
+        &__logo-about {
             width: 130px;
             height: 60px;
         }
@@ -209,11 +196,11 @@
                 vertical-align: middle;
                 margin: 0 6px 0;
             }
-            &-grey {
+            &-about {
                 font-size: 16px;
                 line-height: 20px;
                 text-align: right;
-                color: #B3B3BA;
+                color: $colorgreytext;
                 &::after {
                     content: "";
                     display: inline-block;
@@ -278,14 +265,14 @@
                 background: $colorgreyish;
                 border-radius: 8px;
             }
-            &-grey {
+            &-about {
                 margin-left: 1px;
             }
         }
         &__extra {
             font-size: 36px;
             line-height: 44px;
-            color: #323264;
+            color: $colordarkblue;
         }
         &__phone {
             font-weight: 700;
@@ -304,12 +291,12 @@
                     vertical-align: middle;
                     margin: 0 6px 0;
                 }
-            &-grey {
+            &-about {
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 20px;
                 text-align: right;
-                color: #B3B3BA;
+                color: $colorgreytext;
                 text-decoration: none;
                     &::after {
                         content: "";
@@ -321,9 +308,9 @@
                         vertical-align: middle;
                         margin: 0 6px 0;
                     }
-            }
+                }
 
-        }
+            }
         &__line {
             justify-content: flex-start;
             padding: 24px 0 0 0;
@@ -334,7 +321,7 @@
             padding: 20px 0 18px;
         }
         &__menu-btn,
-        &__menu-btn-grey {
+        &__menu-btn-about {
             display: none;
         }
         &__logo {
@@ -349,19 +336,24 @@
                 padding-bottom: 3px;
             }
             &:active {
-                color: #F0145A;
+                color: $colorpink;
                 border-bottom: 2px solid $colorpink;
                 padding-bottom: 3px;
             }
-            &-blue {
+            &--blue {
                 margin-right: 16px;
-                color: #24A3FF;
+                color: $colorblueregular;
                 &:hover {
-                    border-bottom: 2px solid #24A3FF;
+                    border-bottom: 2px solid $colorblueregular;
                     padding-bottom: 3px;
                 }
                 &:active {
-                    color: #F0145A;
+                    color: $colorpink;
+                    border-bottom: 2px solid $colorpink;
+                    padding-bottom: 3px;
+                }
+                &--active {
+                    color: $colorpink;
                     border-bottom: 2px solid $colorpink;
                     padding-bottom: 3px;
                 }
@@ -396,17 +388,17 @@
             margin: 0 5px 0 6px;
         }
         &__language::after {
-            margin: 0 11px 0 0;
+            margin: 0 5px 0 0;
         }
         &__address::after {
             margin: 0 7px 0 6px;
         }
-        &__address-grey::after {
+        &__address-about::after {
             margin: 0 4px 0;
         }
         &__menu-name {
             margin: 0 0 0 15px;
-            &-blue {
+            &--blue {
                 margin-left: 15px;
                 margin-right: 0;
             }

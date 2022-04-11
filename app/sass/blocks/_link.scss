@@ -16,10 +16,10 @@
         margin-left: 3px;
     }
     &:hover {
-        color: #0085FF;
+        color: $colorbluehover;
     }
     &:active {
-        color: #006CCF;
+        color: $colorblueactive;
     }
 }
 

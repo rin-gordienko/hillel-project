@@ -1,6 +1,5 @@
 .publications {
     padding: 29px 0;
-    // border-bottom: 2px solid $colorgreysep;
     &__name {
         padding-top: 5px;
     }
@@ -23,10 +22,10 @@
             color: $colorblueregular;
             margin-bottom: 15px;
             &:hover {
-                color: #0085FF;
+                color: $colorbluehover;
             }
             &:active {
-                color: #006CCF;
+                color: $colorblueactive;
             }
         }
         &-data {
@@ -41,7 +40,7 @@
         &-text {
             font-size: 14px;
             line-height: 22px;
-            color: #000000;
+            color: $colorblackzero;
             border-top: 4px solid $colorgreysep;
             padding-top: 15px;
         }
@@ -59,9 +58,6 @@
 
 }
 
-.bg--grey {
-    background-color: $colorgreybg;
-}
 
 @media screen and (min-width: 768px) {
     .publications {
@@ -94,8 +90,8 @@
             flex-direction: row;
             padding-top: 29px;
         }
-            &__item {
-                width: 100%;
+        &__item {
+            width: 100%;
         }       
     }
 }

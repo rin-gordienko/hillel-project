@@ -43,20 +43,20 @@
 }
 
 .img-responsive {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
-      color: #ffff;
-      text-decoration: none;
-      &:hover {
-        text-decoration: none;
-       }
-  }
+    color: #ffff;
+    text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    }
+}
 
 
-.bg-letter {
+.bg--letter {
     background-image: url(../img/letter.svg);
     background-position: top center;
     background-repeat: no-repeat;

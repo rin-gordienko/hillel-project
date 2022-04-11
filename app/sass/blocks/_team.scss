@@ -5,7 +5,7 @@
     text-align: center;
     letter-spacing: 13px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $colorwhite;
     display: block;
     height: 114px;
     padding: 35px 114px;
@@ -54,8 +54,6 @@
                 padding-right: 50px;
             }
             &-title {
-                // padding-bottom: 60px;
-                // padding-left: 130px;
                 max-width: 40%;
             }
         }
@@ -77,14 +75,9 @@
                 padding-right: 0;
             }
             &-title {
-                // padding-bottom: 60px;
-                // padding-left: 130px;
-                
-                // padding-left: 59px;
                 max-width: 35%;
                 padding-left: 16px;
             }
         }
-    
     }
 }

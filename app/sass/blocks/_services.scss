@@ -4,8 +4,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, min-content);
     row-gap: 30px;
-}
-
+    }
     &__name {
         margin-bottom: 31px;
         margin-top: 7px;
@@ -23,10 +22,10 @@
         line-height: 27px;
         color: $colorblueregular;
         &:hover {
-            color: #0085FF;
+            color: $colorbluehover;
         }
         &:active {
-            color: #006CCF;
+            color: $colorblueactive;
         }
     }
     &__item-about {
@@ -50,18 +49,15 @@
             margin-top: 9px;
             margin-bottom: 60px;
         }
-        // &__item {
-           
-        // }
     }
 }
 
 @media screen and (min-width: 992px) {
     .services {
+        padding-bottom: 60px;
         &__link {
             margin-bottom: 10px;
         }
-        padding-bottom: 60px;
         &__list {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);

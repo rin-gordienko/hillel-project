@@ -212,7 +212,7 @@ a:hover {
   text-decoration: none;
 }
 
-.bg-letter {
+.bg--letter {
   background-image: url(../img/letter.svg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -263,12 +263,68 @@ input, textarea, select, button {
   position: relative;
 }
 
-.header__address, .header__address-grey, .header__facebook {
+.header__address, .header__address-about, .header__facebook {
   display: none;
 }
 
 .header__language {
   z-index: 1;
+}
+
+.header__language-switch {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 5px;
+}
+
+.header__language-switch:focus {
+  background-color: #F0145A;
+  border-radius: 8px;
+}
+
+.header__language-switch:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.header__language-switch--active {
+  background-color: #F0145A;
+  border-radius: 8px;
+}
+
+.header__language-switch-about {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 5px;
+}
+
+.header__language-switch-about:focus {
+  background-color: #F0145A;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.header__language-switch-about:hover {
+  background: #F5F5FA;
+  border-radius: 8px;
+}
+
+.header__language-switch-about--active {
+  background-color: #F0145A;
+  border-radius: 8px;
+  color: #FFFFFF;
 }
 
 .header__main-menu {
@@ -306,62 +362,6 @@ input, textarea, select, button {
   padding: 7px 0;
 }
 
-.header__language-switch {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 5px 5px;
-}
-
-.header__language-switch:focus {
-  background-color: #F0145A;
-  border-radius: 8px;
-}
-
-.header__language-switch:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-}
-
-.header__language-switch--active {
-  background-color: #F0145A;
-  border-radius: 8px;
-}
-
-.header__language-switch-grey {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #b3b3ba;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 5px 5px;
-}
-
-.header__language-switch-grey:focus {
-  background-color: #F0145A;
-  border-radius: 8px;
-  color: #FFFFFF;
-}
-
-.header__language-switch-grey:hover {
-  background: grey;
-  border-radius: 8px;
-}
-
-.header__language-switch-grey--active {
-  background-color: #F0145A;
-  border-radius: 8px;
-  color: #FFFFFF;
-}
-
 .header__extra {
   font-size: 20px;
   line-height: 24px;
@@ -383,7 +383,7 @@ input, textarea, select, button {
   color: #F0145A;
 }
 
-.header__phone-grey {
+.header__phone-about {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -393,7 +393,7 @@ input, textarea, select, button {
   z-index: 1;
 }
 
-.header__phone-grey:hover {
+.header__phone-about:hover {
   color: #F0145A;
 }
 
@@ -434,18 +434,18 @@ input, textarea, select, button {
   vertical-align: middle;
 }
 
-.header__menu-btn-grey {
+.header__menu-btn-about {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.header__menu-btn-grey:hover {
+.header__menu-btn-about:hover {
   background: #E6E6F0;
   border-radius: 8px;
 }
 
-.header__menu-btn-grey svg {
+.header__menu-btn-about svg {
   vertical-align: middle;
 }
 
@@ -453,7 +453,7 @@ input, textarea, select, button {
   color: #24A3FF;
 }
 
-.header__logo-grey {
+.header__logo-about {
   width: 70px;
   height: 32px;
 }
@@ -464,10 +464,10 @@ input, textarea, select, button {
     grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
     grid-template-rows: min-content min-content min-content;
   }
-  .header__address, .header__address-grey, .header__facebook, .header__menu-list {
+  .header__address, .header__address-about, .header__facebook, .header__menu-list {
     display: block;
   }
-  .header__logo-grey {
+  .header__logo-about {
     width: 130px;
     height: 60px;
   }
@@ -491,13 +491,13 @@ input, textarea, select, button {
     vertical-align: middle;
     margin: 0 6px 0;
   }
-  .header__address-grey {
+  .header__address-about {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
     color: #B3B3BA;
   }
-  .header__address-grey::after {
+  .header__address-about::after {
     content: "";
     display: inline-block;
     background: #E6E6F0;
@@ -565,7 +565,7 @@ input, textarea, select, button {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
   }
-  .header__language-switch-grey {
+  .header__language-switch-about {
     margin-left: 1px;
   }
   .header__extra {
@@ -591,7 +591,7 @@ input, textarea, select, button {
     vertical-align: middle;
     margin: 0 6px 0;
   }
-  .header__phone-grey {
+  .header__phone-about {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -599,7 +599,7 @@ input, textarea, select, button {
     color: #B3B3BA;
     text-decoration: none;
   }
-  .header__phone-grey::after {
+  .header__phone-about::after {
     content: "";
     display: inline-block;
     background: #E6E6F0;
@@ -622,7 +622,7 @@ input, textarea, select, button {
     display: flex;
     padding: 20px 0 18px;
   }
-  .header__menu-btn, .header__menu-btn-grey {
+  .header__menu-btn, .header__menu-btn-about {
     display: none;
   }
   .header__logo {
@@ -642,15 +642,20 @@ input, textarea, select, button {
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
   }
-  .header__menu-name-blue {
+  .header__menu-name--blue {
     margin-right: 16px;
     color: #24A3FF;
   }
-  .header__menu-name-blue:hover {
+  .header__menu-name--blue:hover {
     border-bottom: 2px solid #24A3FF;
     padding-bottom: 3px;
   }
-  .header__menu-name-blue:active {
+  .header__menu-name--blue:active {
+    color: #F0145A;
+    border-bottom: 2px solid #F0145A;
+    padding-bottom: 3px;
+  }
+  .header__menu-name--blue--active {
     color: #F0145A;
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
@@ -685,18 +690,18 @@ input, textarea, select, button {
     margin: 0 5px 0 6px;
   }
   .header__language::after {
-    margin: 0 11px 0 0;
+    margin: 0 5px 0 0;
   }
   .header__address::after {
     margin: 0 7px 0 6px;
   }
-  .header__address-grey::after {
+  .header__address-about::after {
     margin: 0 4px 0;
   }
   .header__menu-name {
     margin: 0 0 0 15px;
   }
-  .header__menu-name-blue {
+  .header__menu-name--blue {
     margin-left: 15px;
     margin-right: 0;
   }
@@ -1257,24 +1262,24 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 992px) {
-  .partners--hidden {
-    display: contents;
-  }
   .partners__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 120px);
+  }
+  .partners--hidden {
+    display: contents;
   }
 }
 
 @media screen and (min-width: 1201px) {
-  .partners--hidden {
-    display: contents;
-  }
   .partners__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 120px);
+  }
+  .partners--hidden {
+    display: contents;
   }
 }
 
@@ -1399,10 +1404,6 @@ input, textarea, select, button {
   height: 200px;
 }
 
-.bg--grey {
-  background-color: #F5F5FA;
-}
-
 @media screen and (min-width: 768px) {
   .publications__wrapper {
     display: -webkit-box;
@@ -1444,6 +1445,10 @@ input, textarea, select, button {
   .publications__item {
     width: 100%;
   }
+}
+
+.footer {
+  padding-bottom: 30px;
 }
 
 .footer__contact {
@@ -1545,7 +1550,7 @@ input, textarea, select, button {
 
 .footer__credits {
   border-top: 2px solid #E6E6F0;
-  padding-top: 30px;
+  padding-top: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1559,7 +1564,7 @@ input, textarea, select, button {
     grid-template-rows: -webkit-max-content -webkit-max-content;
     grid-template-rows: max-content max-content;
   }
-  .footer__credits-grey {
+  .footer__credits-about {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1642,7 +1647,7 @@ input, textarea, select, button {
   .footer__corp {
     font-size: 15px;
   }
-  .footer__corp-grey {
+  .footer__corp-about {
     text-align: start;
     font-size: 16px;
     padding-left: 60px;
@@ -1656,7 +1661,7 @@ input, textarea, select, button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer__credits-grey {
+  .footer__credits-about {
     display: grid;
     grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: max-content max-content;
@@ -1667,7 +1672,7 @@ input, textarea, select, button {
             justify-content: space-between;
     padding-left: 0;
   }
-  .footer__corp-grey {
+  .footer__corp-about {
     margin-top: 0px;
   }
   .footer__contact-location {
@@ -1675,7 +1680,7 @@ input, textarea, select, button {
   }
 }
 
-.bg-grey {
+.back-line {
   position: absolute;
   font-size: 0;
   width: 100%;
@@ -1687,7 +1692,7 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 768px) {
-  .bg-grey {
+  .back-line {
     display: none;
   }
 }
@@ -1845,6 +1850,7 @@ input, textarea, select, button {
   .pros__graph {
     margin-bottom: 150px;
     max-width: 43%;
+    padding-left: 32px;
   }
 }
 
@@ -1969,7 +1975,7 @@ input, textarea, select, button {
 }
 
 .slider-two {
-  padding-bottom: 16px;
+  padding-bottom: 15px;
 }
 
 .slider-two__wrapper {
@@ -2010,6 +2016,9 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 768px) {
+  .slider-two {
+    padding-bottom: 14px;
+  }
   .slider-two__wrapper {
     min-width: 132px;
     min-height: 90px;
@@ -2030,6 +2039,9 @@ input, textarea, select, button {
 }
 
 @media screen and (min-width: 992px) {
+  .slider-two {
+    padding-bottom: 15px;
+  }
   .slider-two__wrapper {
     min-width: 196px;
     height: 110px;
@@ -2063,6 +2075,10 @@ input, textarea, select, button {
   .slash {
     margin-left: 4px;
   }
+}
+
+.bg--grey {
+  background-color: #F5F5FA;
 }
 
 /*# sourceMappingURL=style.css.map */

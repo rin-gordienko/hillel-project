@@ -1,6 +1,5 @@
 .footer {
-    // &__credits {
-    // }
+    padding-bottom: 30px;
     &__contact {
         display: flex;
         flex-direction: column;
@@ -55,7 +54,7 @@
     line-height: 20px;
     color: $colorblueregular;
     margin-bottom: 30px;
-    &:hover {
+        &:hover {
         color: $colorpink;
     }
     }
@@ -66,8 +65,8 @@
     color: $colorgreytext;
     }
     &__credits {
-        border-top: 2px solid #E6E6F0;
-        padding-top: 30px;
+        border-top: 2px solid $colorgreysep;
+        padding-top: 32px;
     }
 }
 
@@ -75,13 +74,10 @@
     .footer {
         padding-bottom: 30px;
         &__credits {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
             display: grid;
             grid-template-columns: max-content max-content;
             grid-template-rows: max-content max-content; 
-            &-grey {
+            &-about {
                 display: flex;
                 flex-direction: column;
                 padding-left: 125px;
@@ -145,7 +141,7 @@
         }
         &__corp {
             font-size: 15px;
-            &-grey {
+            &-about {
                 text-align: start;
                 font-size: 16px;
                 padding-left: 60px;
@@ -161,7 +157,7 @@
   
         &__credits {
             justify-content: space-between;
-            &-grey {
+            &-about {
                 display: grid;
                 grid-template-columns: max-content max-content;
                 grid-template-rows: max-content max-content; 
@@ -169,11 +165,9 @@
                 padding-left: 0;
             }
         }
-        &__corp-grey {
+        &__corp-about {
             margin-top: 0px;
         }
-        
-
         &__contact {
             &-location {
                 padding-bottom: 8px;

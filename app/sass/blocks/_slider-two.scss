@@ -1,8 +1,8 @@
 .slider-two {
     
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     &__wrapper {
-        background: #FFFFFF;
+        background: $colorwhite;
         border-radius: 12px;
         display: flex;
         justify-content: center;
@@ -27,13 +27,14 @@
         line-height: 17px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #323264;
+        color: $colordarkblue;
     }
 }
 
 
 @media screen and (min-width: 768px) {
     .slider-two{
+        padding-bottom: 14px;
         &__wrapper {
             min-width: 132px;
             min-height: 90px; 
@@ -48,30 +49,21 @@
         }
         &__page {
             margin-bottom: 20px;
-
         }
-
     }
-
 }
 
 @media screen and (min-width: 992px) {
     .slider-two{
+        padding-bottom: 15px;
         &__wrapper {
             min-width: 196px;
             height: 110px; 
         }
         &__pic {
             width: auto;
-            &-first {
-                
-            }
-        }
-        &__page {
-          
         }
     }
-
 }
 
 
@@ -80,16 +72,6 @@
         &__wrapper {
             min-width: 300px;
         }
-        &__pic {
-
-            &-first {
-                
-            }
-        }
-        &__page {
-          
-        }
     }
-
 }
 
