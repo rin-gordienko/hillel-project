@@ -156,6 +156,15 @@
     }
     &__menu-name {
         color: $colorblueregular;
+        &:active {
+            color: $colorpink;
+        }
+        &-blue {
+            color: $colorblueregular;
+            &:active {
+                color: $colorpink;
+            }
+        }
     }
     &__logo-about {
         width: 70px;
@@ -213,12 +222,12 @@
                 }
             }
         }
-        &__main-menu {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            overflow: hidden;
-        }
+        // &__main-menu {
+        //     position: relative;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     overflow: hidden;
+        // }
         &__menu-list {
             display: flex;
             padding: 0;
@@ -248,23 +257,23 @@
             margin: 0 5px 0 0;
         }
         &__language-switch {
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 15px;
-            text-align: center;
-            letter-spacing: 1px;    
-            color: $colorwhite;
-            text-transform: uppercase;
-            text-decoration: none;
+            // font-weight: 700;
+            // font-size: 12px;
+            // line-height: 15px;
+            // text-align: center;
+            // letter-spacing: 1px;    
+            // color: $colorwhite;
+            // text-transform: uppercase;
+            // text-decoration: none;
             padding: 5px 6px;
-            &:focus {
-                background-color: $colorpink;
-                border-radius: 8px;
-            }
-            &:hover {
-                background: $colorgreyish;
-                border-radius: 8px;
-            }
+            // &:focus {
+            //     background-color: $colorpink;
+            //     border-radius: 8px;
+            // }
+            // &:hover {
+            //     background: $colorgreyish;
+            //     border-radius: 8px;
+            // }
             &-about {
                 margin-left: 1px;
             }
@@ -275,12 +284,12 @@
             color: $colordarkblue;
         }
         &__phone {
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
-            text-align: right;
-            color: $colorwhite;
-            text-decoration: none;
+            // font-weight: 700;
+            // font-size: 16px;
+            // line-height: 20px;
+            // text-align: right;
+            // color: $colorwhite;
+            // text-decoration: none;
                 &::after {
                     content: "";
                     display: inline-block;
@@ -292,12 +301,12 @@
                     margin: 0 6px 0;
                 }
             &-about {
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 20px;
-                text-align: right;
-                color: $colorgreytext;
-                text-decoration: none;
+                // font-weight: 700;
+                // font-size: 16px;
+                // line-height: 20px;
+                // text-align: right;
+                // color: $colorgreytext;
+                // text-decoration: none;
                     &::after {
                         content: "";
                         display: inline-block;
@@ -317,7 +326,7 @@
             margin-bottom: 0;
         }
         &__logo-box {
-            display: flex;
+            // display: flex;
             padding: 20px 0 18px;
         }
         &__menu-btn,
@@ -340,10 +349,10 @@
                 border-bottom: 2px solid $colorpink;
                 padding-bottom: 3px;
             }
-            &--blue {
+            &-blue {
                 margin-right: 16px;
-                color: $colorblueregular;
                 &:hover {
+                    color: $colorblueregular;
                     border-bottom: 2px solid $colorblueregular;
                     padding-bottom: 3px;
                 }
@@ -398,7 +407,7 @@
         }
         &__menu-name {
             margin: 0 0 0 15px;
-            &--blue {
+            &-blue {
                 margin-left: 15px;
                 margin-right: 0;
             }

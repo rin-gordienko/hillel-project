@@ -453,6 +453,18 @@ input, textarea, select, button {
   color: #24A3FF;
 }
 
+.header__menu-name:active {
+  color: #F0145A;
+}
+
+.header__menu-name-blue {
+  color: #24A3FF;
+}
+
+.header__menu-name-blue:active {
+  color: #F0145A;
+}
+
 .header__logo-about {
   width: 70px;
   height: 32px;
@@ -507,16 +519,6 @@ input, textarea, select, button {
     vertical-align: middle;
     margin: 0 7px 0;
   }
-  .header__main-menu {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    overflow: hidden;
-  }
   .header__menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -547,23 +549,7 @@ input, textarea, select, button {
     margin: 0 5px 0 0;
   }
   .header__language-switch {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    text-decoration: none;
     padding: 5px 6px;
-  }
-  .header__language-switch:focus {
-    background-color: #F0145A;
-    border-radius: 8px;
-  }
-  .header__language-switch:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
   }
   .header__language-switch-about {
     margin-left: 1px;
@@ -572,14 +558,6 @@ input, textarea, select, button {
     font-size: 36px;
     line-height: 44px;
     color: #323264;
-  }
-  .header__phone {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: right;
-    color: #FFFFFF;
-    text-decoration: none;
   }
   .header__phone::after {
     content: "";
@@ -590,14 +568,6 @@ input, textarea, select, button {
     width: 6px;
     vertical-align: middle;
     margin: 0 6px 0;
-  }
-  .header__phone-about {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: right;
-    color: #B3B3BA;
-    text-decoration: none;
   }
   .header__phone-about::after {
     content: "";
@@ -617,9 +587,6 @@ input, textarea, select, button {
     margin-bottom: 0;
   }
   .header__logo-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     padding: 20px 0 18px;
   }
   .header__menu-btn, .header__menu-btn-about {
@@ -642,20 +609,20 @@ input, textarea, select, button {
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
   }
-  .header__menu-name--blue {
+  .header__menu-name-blue {
     margin-right: 16px;
-    color: #24A3FF;
   }
-  .header__menu-name--blue:hover {
+  .header__menu-name-blue:hover {
+    color: #24A3FF;
     border-bottom: 2px solid #24A3FF;
     padding-bottom: 3px;
   }
-  .header__menu-name--blue:active {
+  .header__menu-name-blue:active {
     color: #F0145A;
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
   }
-  .header__menu-name--blue--active {
+  .header__menu-name-blue--active {
     color: #F0145A;
     border-bottom: 2px solid #F0145A;
     padding-bottom: 3px;
@@ -701,7 +668,7 @@ input, textarea, select, button {
   .header__menu-name {
     margin: 0 0 0 15px;
   }
-  .header__menu-name--blue {
+  .header__menu-name-blue {
     margin-left: 15px;
     margin-right: 0;
   }
@@ -864,9 +831,6 @@ input, textarea, select, button {
             justify-content: center;
   }
   .achievements__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
